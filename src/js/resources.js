@@ -1,9 +1,11 @@
 import { ImageSource, Sound, Resource, Loader } from 'excalibur'
-import fishImage from '../images/fish.png'
+import virusGoodImage from '../images/virusGood.png'
+import virusBadImage from '../images/virusBad.png'
 
 const Resources = {
-    Fish: new ImageSource(fishImage)
+    VirusGood: new ImageSource(virusGoodImage),
+    VirusBad: new ImageSource(virusBadImage)
 }
-const ResourceLoader = new Loader([Resources.Fish])
+const ResourceLoader = new Loader([Resources.VirusBad, Resources.VirusGood])
 
 export { Resources, ResourceLoader }
