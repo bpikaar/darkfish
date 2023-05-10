@@ -14,7 +14,7 @@ export class Ui extends Actor{
 
         const label = new Label({
             pos: new Vector(_engine.drawWidth / 2, _engine.drawHeight - 80),
-            text: "Prevent the fish to turn to the Darkside.\nClick on dark fish to kill them.",
+            text: "Prevent the viruses to turn to the Darkside.\nClick on dark viruses to kill them.",
             font: new Font({
                 family: 'Poppins',
                 // style: FontStyle.Italic,
@@ -31,7 +31,7 @@ export class Ui extends Actor{
 
         this.score = new Label({
             pos: new Vector(_engine.drawWidth - 50, 50),
-            text: "Dark Fish: 10 (50)",
+            text: "Dark Viruses: 10 (50)",
             font: new Font({
                 family: 'Poppins',
                 textAlign: TextAlign.Right,
@@ -57,6 +57,6 @@ export class Ui extends Actor{
         const darkFished = fish.filter(f => f.darkSide)
 
 
-        this.score.text = `Dark Fish: ${darkFished.length} (${fish.length})`
+        this.score.text = `Dark Viruses: ${darkFished.length} (${fish.length})`
     }
 }

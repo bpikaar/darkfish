@@ -1,4 +1,4 @@
-import {Actor, Color, Random, Timer, Vector} from "excalibur";
+import {Actor, Color, Random, Resource, Timer, Vector} from "excalibur";
 import {Resources} from "./resources.js";
 
 export class Fish extends Actor {
@@ -6,18 +6,18 @@ export class Fish extends Actor {
     darkSide
 
     turnDark() {
-        this.sprite.tint = Color.Red
+        this.sprite = this.graphics.use(Resources.VirusBad.toSprite())
         this.darkSide = true
     }
 
     constructor(posX, posY) {
         super({
-                width: Resources.Fish.width,
-                height: Resources.Fish.height
+                width: Resources.VirusGood.width,
+                height: Resources.VirusGood.height
         });
         this.pos = new Vector(posX, posY)
 
-        this.sprite = this.graphics.use(Resources.Fish.toSprite())
+        this.sprite = this.graphics.use(Resources.VirusGood.toSprite())
     }
 
     onInitialize(_engine) {
