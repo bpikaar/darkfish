@@ -1,5 +1,5 @@
 import {Actor, BaseAlign, Color, Font, FontStyle, Label, TextAlign, vec, Vector} from "excalibur";
-import {Fish} from "./fish.js";
+import {Virus} from "./virus.js";
 
 export class Ui extends Actor{
 
@@ -50,13 +50,13 @@ export class Ui extends Actor{
 
     onPostUpdate(_engine, _delta) {
         /**
-         * @type {Fish[]}
+         * @type {Virus[]}
          */
-        const fish = _engine.currentScene.actors.filter(a => a instanceof Fish)
-        console.log(fish)
-        const darkFished = fish.filter(f => f.darkSide)
+        const virus = _engine.currentScene.actors.filter(a => a instanceof Virus)
+        console.log(virus)
+        const darkViruses = virus.filter(v => v.darkSide)
 
 
-        this.score.text = `Dark Viruses: ${darkFished.length} (${fish.length})`
+        this.score.text = `Dark Viruses: ${darkViruses.length} (${virus.length})`
     }
 }

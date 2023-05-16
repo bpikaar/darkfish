@@ -1,7 +1,7 @@
 import '../css/style.css'
 import {Actor, DisplayMode, Engine, Screen, Vector} from "excalibur"
 import { Resources, ResourceLoader } from './resources.js'
-import {Fish} from "./fish.js";
+import {Virus} from "./virus.js";
 import {Ui} from "./ui.js";
 
 export class Game extends Engine {
@@ -21,7 +21,7 @@ export class Game extends Engine {
         this.add(new Ui())
 
         for (let i = 0; i < 50; i++) {
-            this.add(new Fish(
+            this.add(new Virus(
                 Math.random() * (this.drawWidth - 50) + 50,
                 Math.random() * (this.drawHeight - 50) + 50
             ))

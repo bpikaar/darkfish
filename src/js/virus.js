@@ -1,7 +1,7 @@
 import {Actor, Color, Random, Resource, Timer, Vector} from "excalibur";
 import {Resources} from "./resources.js";
 
-export class Fish extends Actor {
+export class Virus extends Actor {
     sprite
     darkSide
 
@@ -51,7 +51,7 @@ export class Fish extends Actor {
         this.vel.x *= -1
         this.sprite.flipHorizontal = !this.sprite.flipHorizontal
 
-        if(event.other instanceof  Fish) {
+        if(event.other instanceof  Virus) {
             if(event.other.darkSide && !this.darkSide) {
                 this.turnDark()
             }
